@@ -92,7 +92,7 @@ section {
 
   @supports (background-blend-mode: multiply) {
     background: url(../img/shoe-3.png),
-      radial-gradient(#444, #111);
+      radial-gradient(rgb(189, 180, 180), #111);
     background-blend-mode: multiply;
     background-attachment: fixed;
     background-repeat: no-repeat;

@@ -65,10 +65,15 @@ section {
   padding: .5em 1.25em;
   background: var(--clr-accent, blue);
   border-radius: .25em;
-  -webkit-transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
-  transition: opacity 250ms linear, -webkit-transform 250ms ease-in-out;
-  transition: transform 250ms ease-in-out, opacity 250ms linear;
-  transition: transform 250ms ease-in-out, opacity 250ms linear, -webkit-transform 250ms ease-in-out;
+  -webkit-transition: opacity 250ms linear,
+ -webkit-transform 250ms ease-in-out;
+  transition: opacity 250ms linear,
+ -webkit-transform 250ms ease-in-out;
+  transition: transform 250ms ease-in-out,
+ opacity 250ms linear;
+  transition: transform 250ms ease-in-out,
+ opacity 250ms linear,
+ -webkit-transform 250ms ease-in-out;
 }
 
 .btn:hover,
@@ -85,16 +90,23 @@ section {
   text-transform: uppercase;
 }
 
+.secondary-title {
+  font-size: 2rem;
+  font-size: clamp(2rem, calc(4vw + 1rem), 3rem);
+  line-height: 1;
+}
+
 .section-title {
   text-align: center;
   font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
   line-height: 1;
-  color: #17353d;
+  /* text-shadow: 0 0 2em black; */
+  color: #ffffff;
   margin-bottom: 5rem;
 }
 
 .hero {
-  color: white;
+  color: black;
   text-align: center;
   padding: 15em 0;
   background: #222;
@@ -102,23 +114,28 @@ section {
 
 @supports (background-blend-mode: multiply) {
   .hero {
-    background: url(../img/shoe-3.png), radial-gradient(#444, #111);
-    background-blend-mode: multiply;
+    background: url(../img/walmart-1.jpg), radial-gradient(#444, #111);
+    background-blend-mode: normal;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: relative;
+    
   }
 }
 
 .featured {
-  background: #eee;
+  background: rgb(157, 243, 146);
+}
+
+.featured2 {
+  background: rgb(237, 243, 146);
 }
 
 .featured__item {
   display: block;
   position: relative;
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
+  -webkit-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: -webkit-transform 250ms ease-in-out;
   transition: -webkit-transform 250ms ease-in-out;
   transition: transform 250ms ease-in-out;
@@ -127,6 +144,7 @@ section {
   color: #333;
   text-align: center;
   line-height: 1.2;
+  height: 3;
 }
 
 .featured__item:hover, .featured__item:focus {
@@ -141,7 +159,7 @@ section {
 
 .featured__item::after {
   content: '';
-  position: absolute;
+  position: relative;
   top: 10%;
   left: 10%;
   padding: 75% 75% 0 0;
@@ -171,15 +189,27 @@ section {
 }
 
 .product__title {
-  font-size: clamp(3rem, calc(5vw + 1rem), 5.5rem);
+  font-size: clamp(2rem, calc(4vw + .6rem), 4rem);
   text-transform: uppercase;
   line-height: 1;
   color: #fff;
   text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
 }
 
+.product__description {
+  font-size: clamp(1rem, calc(2.5vw + .6rem), 1.5rem);
+  line-height: 1;
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+  line-height: 1.5;
+}
+
 .product__image {
   margin: -5em 0 0 0;
+}
+
+.featured__image {
+  height: 10;
 }
 
 @media (min-width: 45em) {
@@ -206,7 +236,7 @@ section {
 }
 
 .hero {
-  --clr-accent: #faa700;
+  --clr-accent: #00aeff;
 }
 
 .shoe-red {
