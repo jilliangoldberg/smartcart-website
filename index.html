@@ -10,6 +10,17 @@
   <link rel="stylesheet" href="css/main.css" />
 </head>
 
+<div class="topnav">
+  <a href="#home" class="active" >Home</a>
+  <a href="#problem">The Problem</a>
+  <a href="#solution">The Solution</a>
+  <a href="#impact">The Impact</a>
+  <a href="#about">About Me</a>
+  <a href="javascript:void(0);" class="icon" onclick="clickNav()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
 <body>
 
   <header class="hero">
@@ -24,18 +35,37 @@
 
   <main>
 
-    <section class="featured">
+    <section id="problem" class="featured">
       <div class="container">
         <h2 class="section-title">The Problem</h2>
         <div class="split">
           <!-- <h3 class="product__title">The Problem</h3> -->
+          <a class="featured__item">
+            <img src="img/gif1.gif" alt="" class="featured__img">
+            <!-- <img src="img/iphone.png" alt="" class="featured__img"> -->
+            <!-- <p class="featured__details">Home Page</p> -->
+          </a>
           <p class="product__description">As
             the world becomes increasingly fast-paced and digital, people often begin to
             forget daily activities, such as buying the grocery items they need. While this
             problem may seem small, the time and energy spent buying forgotten grocery
             items is much larger than it should be...</p>
+          </div>
+      </div>
+    </section>
+
+    <section id="solution" class="featured2">
+      <div class="container">
+        <h2 class="section-title">The Solution</h2>
+        <div class="split">
+          <!-- <h3 class="product__title">The Problem</h3> -->
+          <p class="product__description">
+            The Walmart "Smart Cart" is an app that solves the problem of forgotten grocery items. 
+            On the home screen, users can see their own personal shopping cart, where they can add
+            their own items to the list. But wait - scroll down and that's where the magic happens!
+          </p>
           <a href="#" class="featured__item">
-            <img src="img/gif1.gif" alt="" class="featured__img">
+            <img src="img/gif2.gif" alt="" class="featured__img">
             <!-- <img src="img/iphone.png" alt="" class="featured__img"> -->
             <!-- <p class="featured__details">Home Page</p> -->
           </a>
@@ -43,74 +73,102 @@
       </div>
     </section>
 
-    <section class="featured2">
+    <section id="solution" class="featured3">
+      <h2 class="section-title2">How It Works</h2>
       <div class="container">
-        <h2 class="section-title">The Problem</h2>
-        <div class="split">
-          <!-- <h3 class="product__title">The Problem</h3> -->
-          <p class="product__description">As
-            the world becomes increasingly fast-paced and digital, people often begin to
-            forget daily activities, such as buying the grocery items they need. While this
-            problem may seem small, the time and energy spent buying forgotten grocery
-            items is much larger than it should be...</p>
-          <a href="#" class="featured__item">
-            <img src="img/gif1.gif" alt="" class="featured__img">
-            <!-- <img src="img/iphone.png" alt="" class="featured__img"> -->
-            <!-- <p class="featured__details">Home Page</p> -->
-          </a>
-        </div>
+        <h3>
+          Users get suggestions for new items they might want to buy based on their past purchases,
+          making it seem almost like the Smart Cart can read their mind. It uses past purchasing
+          data to find correlations between items and the frequency they are bought!
+        </h3>
       </div>
-    </section>
-
-    <!-- <section class="featured">
-      <div class="container">
-        <h2 class="section-title">Features</h2>
-        <div class="split">
-          <a href="#" class="featured__item">
-            <img src="img/shoe-4.png" alt="" class="featured__img">
-            <p class="featured__details"><span class="price">$99</span>shoe name</p>
-          </a>
-          <a href="#" class="featured__item">
-            <img src="img/shoe-5.png" alt="" class="featured__img">
-            <p class="featured__details"><span class="price">$99</span>shoe name</p>
-          </a>
-          <a href="#" class="featured__item">
-            <img src="img/shoe-6.png" alt="" class="featured__img">
-            <p class="featured__details"><span class="price">$99</span>shoe name</p>
-          </a>
-        </div>
-      </div>
-    </section> -->
-
+    </section>>
 
     <section class="our-products">
       <div class="container">
-        <h2 class="section-title">Our products</h2>
+        <h2 class="section-title2">The Data!</h2>
 
         <article class="product shoe-red spacing">
-          <img src="img/shoe-1.png" alt="" class="product__image">
-          <h3 class="product__title">A really nice shoe</h3>
-          <p class="product__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam
-            perspiciatis facilis beatae laudantium quidem enim sit sequi!</p>
-          <a href="" class="btn">Buy now</a>
+          <img src="img/gif3.gif" alt="" class="product__image">
+          <h3 class="product__title">The Use of Algorithms</h3>
+          <p class="product__description">
+            The Smart Cart would use both the user's personal past purchases
+            and a larger database of product correlations to predict what someone may want to
+            buy in the future.
+          </p>
+          <a href="" class="btn">Back to Top</a>
         </article>
 
         <article class="product shoe-white shoe-left spacing">
-          <img src="img/shoe-2.png" alt="" class="product__image">
-          <h3 class="product__title">A really nice shoe</h3>
-          <p class="product__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam
-            perspiciatis facilis beatae laudantium quidem enim sit sequi!</p>
-          <a href="" class="btn">Buy now</a>
+          <img src="img/gif4.gif" alt="" class="product__image">
+          <h3 class="product__title">Frequency Detection</h3>
+          <p class="product__description">
+            It would also track purchase history to see how frequently a user is buying a product,
+            so it can suggest the same product to them - when the time comes!
+          </p>
+          <a href="" class="btn">Back to Top</a>
         </article>
+      </div>
+    </section>
 
-        <article class="product shoe-blue spacing">
-          <img src="img/shoe-3.png" alt="" class="product__image">
-          <h3 class="product__title">A really nice shoe</h3>
-          <p class="product__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quam
-            perspiciatis facilis beatae laudantium quidem enim sit sequi!</p>
-          <a href="" class="btn">Buy now</a>
-        </article>
+    <section id="solution" class="featured3">
+      <div class="container">
+        <h2 class="section-title2">The Real-World Impact</h2>
+        <h2>
+          ==== Consumers ====
+        </h2>
+        <h4>
+          Consumers get suggestions on what to buy and get notified when it's 
+          time to buy some of their favorite items. They get to build a virtual cart
+          in their pocket, where they can add new orders, receipts, and take pictures
+          of their cart to track what they buy. Shoppers will never have to take extra,
+          inconvenient trips to the grocery store again!
+        </h4>
+        <h2>
+          ==== Walmart ====
+        </h2>
+        <h4>
+          Just as consumers benefit from the Smart Cart, Walmart is able to build
+          a more loyal customer base and encourage shoppers to continue buying their 
+          favorite products right off the Walmart shelves! This would increase the 
+          retention rate of customers, while also building a personalized experience 
+          for each of their customers.
+        </h4>
+        <h2>
+          ==== The Environment ====
+        </h2>
+        <h4>
+          One of the most pressing issues of our time is climate change, and 
+          a large part of saving the globe is decreasing pollution caused
+          by cars. With the Smart Cart, people will no longer have to take those
+          extra trips to the grocery store, which decreases vehicle emissions 
+          and lowers the overall transport waste each and every year.
+        </h4>
+      </div>
+    </section>>
 
+    <section id="#about" class="featured">
+      <div class="container">
+        <h2 class="section-title">Thank You!</h2>
+        <div class="split">
+          <!-- <h3 class="product__title">The Problem</h3> -->
+          <a class="featured__item">
+            <img src="img/me.jpeg" alt="" class="featured__img">
+            <!-- <img src="img/iphone.png" alt="" class="featured__img"> -->
+            <!-- <p class="featured__details">Home Page</p> -->
+          </a>
+            <h4 class="about_me">
+              Hi there! My name is Jillian and I'm a sophomore at UC Berkeley, 
+              majoring in Electrical Engineering and Computer Science + Business Administration.
+              I'm a part of the Management, Entrepreneurship, and Technology (MET) program, which
+              is a collaborative cohort of 50 students. 
+            </h4>
+            <h4 class="about_me">
+              I'm really passionate about data science and machine learning, and more broadly
+              applying technology to solve consumer-centric problems in creative ways. I hope you 
+              enjoyed my app prototype! :)
+            </h4>
+          </div>
       </div>
     </section>
 

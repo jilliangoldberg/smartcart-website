@@ -5,6 +5,85 @@
           box-sizing: border-box;
 }
 
+body { font-size: 80%; font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif; }
+ul#tabs { list-style-type: none; margin: 30px 0 0 0; padding: 0 0 0.3em 0; }
+ul#tabs li { display: inline; }
+ul#tabs li a { color: #42454a; background-color: #dedbde; border: 1px solid #c9c3ba; border-bottom: none; padding: 0.3em; text-decoration: none; }
+ul#tabs li a:hover { background-color: #f1f0ee; }
+ul#tabs li a.selected { color: #000; background-color: #f1f0ee; font-weight: bold; padding: 0.7em 0.3em 0.38em 0.3em; }
+div.tabContent { border: 1px solid #c9c3ba; padding: 0.5em; background-color: #f1f0ee; }
+div.tabContent.hide { display: none; }
+
+
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgb(240, 240, 240);
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: rgb(47, 214, 25);
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
 body {
   margin: 0;
   font-family: 'Noto Sans JP', sans-serif;
@@ -18,7 +97,11 @@ img {
 
 h1,
 h2,
-h3,
+
+h3 {
+  font-size: 150%;
+  text-align: center;
+}
 p {
   margin: 0;
 }
@@ -29,7 +112,7 @@ section {
 
 .container {
   width: 85%;
-  max-width: 65em;
+  /* max-width: 100em; */
   margin: 0 auto;
 }
 
@@ -96,12 +179,28 @@ section {
   line-height: 1;
 }
 
+.lil-title {
+  font-size: 2rem;
+  font-size: clamp(2.5rem, calc(4vw + 1rem), 4rem);
+  font-style: oblique;
+  line-height: 1;
+}
+
 .section-title {
   text-align: center;
   font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
   line-height: 1;
   /* text-shadow: 0 0 2em black; */
   color: #ffffff;
+  margin-bottom: 5rem;
+}
+
+.section-title2 {
+  text-align: center;
+  font-size: clamp(2.5rem, calc(5vw + 1rem), 4rem);
+  line-height: 1;
+  /* text-shadow: 0 0 2em black; */
+  color: #000000;
   margin-bottom: 5rem;
 }
 
@@ -129,6 +228,10 @@ section {
 
 .featured2 {
   background: rgb(237, 243, 146);
+}
+
+.featured3 {
+  background: rgb(146, 220, 243);
 }
 
 .featured__item {
@@ -222,17 +325,26 @@ section {
   }
   .product__image {
     float: right;
-    width: 65%;
-    shape-outside: url(../img/shoe-1.png);
-    shape-margin: 1em;
-    margin: 0 -5em 0 0;
+    width: 20%;
+    shape-outside: url(../img/gif3.gif);
+    shape-margin: 2em;
+    margin: 2 -5em 0 0;
   }
   .product.shoe-left .product__image {
     float: left;
-    shape-outside: url(../img/shoe-2.png);
-    margin: 0 0 0 -5em;
+    shape-outside: url(../img/gif4.gif);
+    width: 20%;
+    margin: 2 0 0 -5em;
     shape-margin: 2em;
   }
+}
+
+.about_me {
+  font-size: clamp(.5rem, calc(1vw + .5rem), 1rem);
+  color: rgb(0, 0, 0);
+  text-shadow: 0 0 0.2em rgba(0, 0, 0, 0.2);
+  /* margin: 2 -5em 0 0; */
+  line-height: 1.5;
 }
 
 .hero {
